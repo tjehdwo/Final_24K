@@ -1,0 +1,14 @@
+package com.penpick.service;
+
+import org.springframework.stereotype.Service;
+
+import com.penpick.repository.QuestionRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class QuestionService {
+	private final QuestionRepository questionRepository;
+
+}

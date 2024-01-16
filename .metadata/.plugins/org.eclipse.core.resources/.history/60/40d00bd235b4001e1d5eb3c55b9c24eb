@@ -1,0 +1,16 @@
+package com.penpick.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.penpick.service.QuestionService;
+
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequiredArgsConstructor
+public class QuestionController {
+	private final QuestionService questionService;
+	
+	
+
+}

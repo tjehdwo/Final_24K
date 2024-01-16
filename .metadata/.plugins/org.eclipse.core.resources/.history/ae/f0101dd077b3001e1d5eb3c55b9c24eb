@@ -1,0 +1,18 @@
+package com.penpick.model;
+
+import java.util.Date;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@Getter
+@Setter
+@Entity
+public class Question {
+	private int question_num;
+	private int user_num;
+	private String question_title;
+	private String question_content;
+	private Date question_date;
+
+}

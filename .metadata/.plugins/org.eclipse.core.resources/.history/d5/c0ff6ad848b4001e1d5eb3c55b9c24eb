@@ -1,0 +1,26 @@
+package com.penpick.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.penpick.model.Question;
+import com.penpick.repository.QuestionRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class QuestionService {
+	
+	private final QuestionRepository questionRepository;
+	
+	public List<Question> allQuestionView(){
+		return questionRepository.findAll();
+	}
+	
+	public Question getQuestionByNum(int question_num) {
+		return questionRepository.findQuestionByNum();
+	}
+
+}

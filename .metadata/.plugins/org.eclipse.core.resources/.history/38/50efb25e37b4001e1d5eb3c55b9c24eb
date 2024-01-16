@@ -1,0 +1,21 @@
+package com.penpick.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.penpick.model.Question;
+import com.penpick.service.QuestionService;
+
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequestMapping("/ServiceCenterMain")
+public class QuestionController {
+	@Autowired
+	private final QuestionService questionService;
+	
+	
+}
