@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Controller
-@RequestMapping("/ServiceCenter")
+@RequestMapping("/serviceCenter")
 public class QuestionController {
 	
 	@Autowired
@@ -26,7 +26,7 @@ public class QuestionController {
 	public String questionList(Model model) {
 		List<Question> questions = questionService.allQuestionView();
 		model.addAttribute("questions",questions);
-		return "check_question";
+		return "questionList";
 	}
 	
 	

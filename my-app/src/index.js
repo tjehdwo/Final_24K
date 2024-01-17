@@ -6,13 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import CustomerServiceCenterMain from './CustomerServiceCenterMain';
 import PensionMainPage from './PensionMainPage';
 import Question from './Question';
+import ResHome from './ResHome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CustomerServiceCenterMain />
+    {/* <CustomerServiceCenterMain /> */}
     {/* <PensionMainPage /> */}
     {/* <Question />  */}
+    <ResHome />
   </React.StrictMode>
 );
 

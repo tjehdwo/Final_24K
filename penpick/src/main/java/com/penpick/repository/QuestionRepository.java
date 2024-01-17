@@ -6,7 +6,7 @@ import com.penpick.model.Question;
 
 public interface QuestionRepository extends JpaRepository<Question,Integer>{
 	
-	Question findQuestionByNum(int question_num);
+	Question findById(int question_num);
 	
 
 }

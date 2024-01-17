@@ -19,8 +19,8 @@ public class QuestionService {
 		return questionRepository.findAll();
 	}
 	
-	public Question getQuestionByNum(int question_num) {
-		return questionRepository.findQuestionByNum(question_num);
+	public Question getQuestionById(int question_num) {
+		return questionRepository.findById(question_num);
 	}
 
 }
