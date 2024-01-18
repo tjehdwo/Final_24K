@@ -1,5 +1,5 @@
 import Header from "./Header";
-import './CustomerServiceCenterMain.css';
+import './css/CustomerServiceCenterMain.css';
 import {Link} from 'react-router-dom'
 
 function CustomerServiceCenterMain () {

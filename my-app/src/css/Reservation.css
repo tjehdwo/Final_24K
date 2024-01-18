@@ -1,0 +1,61 @@
+h1 {
+    font-size:30px;
+    margin-top:20px;
+    margin-left:20px;
+    float:left;
+}
+
+/*돌아가기 버튼*/
+.comebackButton {
+    margin-left:20px;
+    border:none;
+    cursor: pointer;
+    background-color: white;
+}
+
+/*예약 섹션1*/
+.reservationSection1 {
+    width:50%;
+    margin-left:20px;
+    margin-top:100px;
+}
+
+/*예약 섹션2*/
+.reservationSection2 {
+    float:right;
+    width:60%;
+    margin-left:20px;
+    margin-top:20px;
+   
+}
+
+/*예약 섹션3*/
+.reservationSection3 {
+    margin-left:20px;
+    margin-top:30px;
+}
+
+/*예약확인 버튼*/
+#checkButton {
+    border:none;
+    border-radius: 5px;
+    margin-left : 10px;
+}
+
+/*결제버튼*/
+#payButton {
+    padding:20px;
+    border:none;
+    margin-left:20px;
+}
+
+/*이미지*/
+.image {
+    margin-right: 30px;
+    width:500px;
+    height:300px;
+}
+
+li {
+    list-style-type: none;
+}

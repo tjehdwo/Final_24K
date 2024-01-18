@@ -1,6 +1,6 @@
 /*PenPick 메인페이지 이미지*/
 #BannerImg1 {
-    background: url('./img/메인커버사진2.jpg') center no-repeat;
+    background: url('../img/메인커버사진2.jpg') center no-repeat;
     background-size: cover;
     height: 600px;
     color: rgb(255, 255, 255);

@@ -1,4 +1,4 @@
-import './PensionMainPage.css';
+import './css/PensionMainPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PenPickLogo from './img/PenPickLogo.png';
 import EventImg from './img/EventImg1.jpg';

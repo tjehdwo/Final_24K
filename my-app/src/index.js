@@ -1,20 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './css/index.css';
+import App from './LinkList';
 import reportWebVitals from './reportWebVitals';
-import CustomerServiceCenterMain from './CustomerServiceCenterMain';
-import PensionMainPage from './PensionMainPage';
-import Question from './Question';
-import ResHome from './ResHome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <CustomerServiceCenterMain /> */}
-    {/* <PensionMainPage /> */}
-    {/* <Question />  */}
-    <ResHome />
+    <App />
   </React.StrictMode>
 );
 
