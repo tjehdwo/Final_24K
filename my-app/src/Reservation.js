@@ -2,9 +2,13 @@ import { Container } from 'react-bootstrap';
 import './css/Reservation.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import CoverImage from './img/펜션1.jpg';
+import KakaoImage from './img/kakao.png';
+import backSpaceImage from './img/뒤로가기.jpg';
 
 function Reservation () {
     const [reservations, setReservations] = useState([]);
+   
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,21 +22,32 @@ function Reservation () {
         fetchData();
     }, []);
 
+    // 결제 페이지 이동
     function payFunction(){
         window.location.href="/payment";
     }
 
+    // 펜션 목록으로 돌아가기
     function comebackFunction(){
-        window.location.href="/Reservation";
+        window.location.href="/";
+    }
+
+    // 고객 센터로 가기
+    function serviceCenterFunction(){
+        window.location.href="/"
+    }
+
+    // 카카오톡 상담
+    function kakaoQuestionFuction(){
+        window.location.href="/"
     }
 
 
     return(
-        <div>
-            <a href="/"><button className='comebackButton' onClick={comebackFunction}>돌아가기</button></a>
+        <div className='reservationDiv'>
+            <button className='comebackButton' onClick={comebackFunction}><img src={backSpaceImage} className="backSpaceImage" alt='돌아가기'></img>돌아가기</button>
             <br />
             <h1>예약 및 결제</h1>
-               
                 <section className='reservationSection1'>
                     <form>
                     <label>예약자 이름</label><tr />
@@ -43,37 +58,43 @@ function Reservation () {
                     </form>
                 </section>
                 <section className='reservationSection2'>
-                    <container>
-                        <img src="./img/파란집.png" className='image'></img>
-                    </container>
+                    <div className="reservationCoverImage">
+                        <img src={CoverImage} className='CoverImage' alt="커버이미지"></img>
+                    </div>
                     <br />
                     
                     <ul>
                     {reservations.map((reservation) => (
                         <li key={reservation.id}>
                             <p>예약 금액 : {reservation.pay}원</p>
-                            <p>예약 날짜 : {reservation.res_date}일</p>
                         </li>
                     ))}
-                    <li>
-                        
-                    </li>
                 </ul>
              
                 
                 </section>
                  
-                     <h1>결제 수단</h1>
+                     
                 <section className='reservationSection3'>
+                <h1>결제 수단</h1>
                     <br />
                     <br />
-                        <button id="payButton" onClick={payFunction}>신용카드</button>
-                        <button id="payButton" onClick={payFunction}>카카오 페이</button>
-                        <button id="payButton" onClick={payFunction}>네이버 페이</button> <tr /> <br />
-                        <button id="payButton" onClick={payFunction}>KB 페이</button>
-                        <button id="payButton" onClick={payFunction}>페이코</button>
-                        <button id="payButton" onClick={payFunction}>휴대폰 결제</button> <br /><br />
-                        <input type="checkbox"></input> <p>이 결제수단을 다음에도 사용</p> 
+                        <div className='buttonBox'>
+                            <button id="payButton" onClick={payFunction}>신용카드</button>
+                            <button id="payButton" onClick={payFunction}>카카오 페이</button>
+                            <button id="payButton" onClick={payFunction}>네이버 페이</button> <tr /> <br />
+                            <button id="payButton" onClick={payFunction}>KB 페이</button>
+                            <button id="payButton" onClick={payFunction}>페이코</button>
+                            <button id="payButton" onClick={payFunction}>휴대폰 결제</button> <br /><br />
+                        </div>
+                        <div className='checkBox'>
+                            <input type="checkbox"></input> <span>이 결제수단을 다음에도 사용</span><br /> <button type="submit" id="reservationButton">예약하기</button>
+                        </div>
+                </section>
+                <section className='reservationSection4'>
+                    <button id="serviceCenterButton" onClick={serviceCenterFunction}>고객센터</button>
+                    <br />
+                    <button id="kakaoQuestionButton" onClick={kakaoQuestionFuction}><img src={KakaoImage} id="kakao" alt='카카오 상담'></img>카카오톡 상담</button>
                 </section>
         </div>
     )

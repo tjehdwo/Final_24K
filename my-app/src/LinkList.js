@@ -4,6 +4,7 @@ import Header from './Header';
 import Reservation from "./Reservation";
 import Payment from "./Payment";
 
+
 export default function LinkList(){
 
     return(
@@ -13,6 +14,7 @@ export default function LinkList(){
                 <Route path="/" element={<Reservation />} />
                 <Route path="/payment" element={<Payment/>} />
             </Routes>
+            
         </Router>
     )
 }

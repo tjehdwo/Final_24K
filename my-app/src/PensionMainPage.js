@@ -25,7 +25,7 @@ function PensionMainPage() {
   };
   return (
     <div>
-      <Header />
+     
       <div id='BannerImg1'>
         {/* 메인 문구 */}
         <div id='MainTitleBox'>

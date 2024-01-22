@@ -4,6 +4,10 @@ h1 {
     margin-left:20px;
     float:left;
 }
+/* 전체 div */
+.reservationDiv {
+    margin-left:280px;
+}
 
 /*돌아가기 버튼*/
 .comebackButton {
@@ -15,24 +19,29 @@ h1 {
 
 /*예약 섹션1*/
 .reservationSection1 {
-    width:50%;
+    width:38%;
     margin-left:20px;
     margin-top:100px;
 }
 
 /*예약 섹션2*/
 .reservationSection2 {
-    float:right;
-    width:60%;
-    margin-left:20px;
-    margin-top:20px;
+    margin-left:600px;
+    width:50%;
+    margin-top:-200px;
    
 }
 
 /*예약 섹션3*/
 .reservationSection3 {
-    margin-left:20px;
-    margin-top:30px;
+    margin-top:-150px;
+}
+
+/* 예약 버튼 */
+#reservationButton{
+    padding:20px;
+    margin-top:10px;
+    border-radius: 10px;
 }
 
 /*예약확인 버튼*/
@@ -49,11 +58,49 @@ h1 {
     margin-left:20px;
 }
 
-/*이미지*/
-.image {
+/*커버이미지*/
+.CoverImage {
     margin-right: 30px;
     width:500px;
     height:300px;
+}
+
+.backSpaceImage {
+    width:50px;
+    height: 50px;
+}
+
+/* 결제선택버튼 */
+.buttonBox {
+    margin-top:30px;
+}
+
+/* 고객센터 버튼 */
+#serviceCenterButton {
+    background-color: white;
+    margin-top:30px;
+    margin-left:20px;
+    border:none;
+}
+
+/* 카카오 상담 */
+#kakaoQuestionButton {
+    background-color: white;
+    margin-top:30px;
+    margin-left:20px;
+    border:none;
+
+}
+
+/* 카카오 이미지 */
+#kakao {
+    width:50px;
+    height:50px;
+}
+
+/* 체크박스 */
+.checkBox {
+    margin-left:20px;
 }
 
 li {
