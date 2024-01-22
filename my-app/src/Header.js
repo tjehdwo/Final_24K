@@ -6,6 +6,7 @@ import FormImg from './img/파란집.png';
 import React, { useState } from 'react';
 import Pagination from 'react-js-pagination';
 import axios from 'axios';
+import PensionMainPage from './PensionMainPage';
 import {
   Button,
   Container,
