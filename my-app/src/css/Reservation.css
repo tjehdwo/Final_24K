@@ -72,7 +72,7 @@ h1 {
 
 /* 결제선택버튼 */
 .buttonBox {
-    margin-top:30px;
+    margin-top:20px;
 }
 
 /* 고객센터 버튼 */
@@ -100,7 +100,43 @@ h1 {
 
 /* 체크박스 */
 .checkBox {
+    margin-top :20px;
     margin-left:20px;
+}
+
+/* 결제 모달 */
+.Modal {
+    border:1px solid;
+    width: 500px;
+    height: 500px;
+    background-color: #f8f8f8;
+    position:fixed;
+    top:30%;
+    left:40%;
+  }
+
+/* 결제 카드 이미지 */
+#cardImage {
+    margin-left:10px;
+    width:60px;
+    height:40px;
+}
+
+/* 모달 창 div  */
+.modalDiv {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+/* 모달 결제하기 버튼 */
+#modalButton {
+    padding:20px;
+    background-color: rgb(69, 56, 250);
+    color:white;
+    border-radius: 10px;
+    border:none;
+    margin-left:170px;
+    margin-top:330px;
 }
 
 li {

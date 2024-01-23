@@ -1,13 +1,16 @@
-import { Container } from 'react-bootstrap';
+import { CardImg, Container } from 'react-bootstrap';
 import './css/Reservation.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CoverImage from './img/펜션1.jpg';
 import KakaoImage from './img/kakao.png';
 import backSpaceImage from './img/뒤로가기.jpg';
+import Modal from 'react-modal';
+import CardImage from './img/체크카드.PNG';
 
-function Reservation () {
+function Reservation () { 
     const [reservations, setReservations] = useState([]);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
    
 
     useEffect(() => {
@@ -23,9 +26,9 @@ function Reservation () {
     }, []);
 
     // 결제 페이지 이동
-    function payFunction(){
-        window.location.href="/payment";
-    }
+    // function payFunction(){
+        // window.location.href="/payment";
+    // }
 
     // 펜션 목록으로 돌아가기
     function comebackFunction(){
@@ -79,17 +82,27 @@ function Reservation () {
                 <h1>결제 수단</h1>
                     <br />
                     <br />
-                        <div className='buttonBox'>
-                            <button id="payButton" onClick={payFunction}>신용카드</button>
-                            <button id="payButton" onClick={payFunction}>카카오 페이</button>
-                            <button id="payButton" onClick={payFunction}>네이버 페이</button> <tr /> <br />
-                            <button id="payButton" onClick={payFunction}>KB 페이</button>
-                            <button id="payButton" onClick={payFunction}>페이코</button>
-                            <button id="payButton" onClick={payFunction}>휴대폰 결제</button> <br /><br />
-                        </div>
                         <div className='checkBox'>
-                            <input type="checkbox"></input> <span>이 결제수단을 다음에도 사용</span><br /> <button type="submit" id="reservationButton">예약하기</button>
+                            <input type="checkbox"></input> <span>이 결제수단을 다음에도 사용</span><br />
                         </div>
+                        <div className='buttonBox'>
+                            <button id="payButton" onClick={() => setModalIsOpen(true)}>신용카드</button>
+                            <Modal className="Modal" isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+                                <form>
+                                    <div className='modalDiv'>
+                                        <span>결제하기<img src={CardImage} id="cardImage" alt="카드이미지"></img></span><br />
+
+                                        <button id="modalButton" type="submit">결제하기</button>
+                                    </div>
+                                </form>
+                            </Modal>
+                            <button id="payButton" onClick={() => setModalIsOpen(true)}>카카오 페이</button>
+                            <button id="payButton" onClick={() => setModalIsOpen(true)}>네이버 페이</button> <tr /> <br />
+                            <button id="payButton" onClick={() => setModalIsOpen(true)}>KB 페이</button>
+                            <button id="payButton" onClick={() => setModalIsOpen(true)}>페이코</button>
+                            <button id="payButton" onClick={() => setModalIsOpen(true)}>휴대폰 결제</button> <br /><br />
+                        </div>
+                        
                 </section>
                 <section className='reservationSection4'>
                     <button id="serviceCenterButton" onClick={serviceCenterFunction}>고객센터</button>
